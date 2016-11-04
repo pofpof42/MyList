@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using ZXing;
+
 using ZXing.Mobile;
 using System.Collections.Generic;
 
@@ -72,7 +73,11 @@ namespace MyListZxingMobile
                 scanner.BottomText = "Wait for the barcode to automatically scan!";
 
                 var opt = new MobileBarcodeScanningOptions();
+                opt.AutoRotate = true;
+                opt.TryHarder = true;
+                opt.TryInverted = true;
                 opt.PossibleFormats = new List<ZXing.BarcodeFormat>() { ZXing.BarcodeFormat.EAN_8, ZXing.BarcodeFormat.EAN_13 };
+                opt.PureBarcode = true;
                 opt.DelayBetweenContinuousScans = 3000;
 
                 //Start scanning
