@@ -13,7 +13,7 @@ using Configuration = Android.Content.Res.Configuration;
 
 namespace MyList
 {
-    [Activity(Label = "MyList", MainLauncher = true, Icon = "@drawable/icon", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
+    [Activity(Label = "MyList", Icon = "@drawable/icon", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class MainActivity : Activity, TextureView.ISurfaceTextureListener
     {
         Camera _camera;
